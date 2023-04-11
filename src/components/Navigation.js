@@ -4,21 +4,22 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import squirtle from '../../public/squirtle.png';
+import { Component } from 'react';
 
-function Navigation() {
-  return (
+class Navigation extends Component {
+  render() {
     <Navbar sticky='top' bg='dark' variant='dark' className="mb-4">
-      <Container>
-        <Navbar.Brand>
-          <Image src={squirtle} width="30" className="me-2" />
-          Pokeverse
-        </Navbar.Brand>
-        <Nav className='me-auto'>
-          <Nav.Link href='/'>All Pokemon</Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
-  );
+    <Container>
+      <Navbar.Brand>
+        <Image src={squirtle} width="30" className="me-2" />
+        Pokeverse
+      </Navbar.Brand>
+      <Nav className='me-auto'>
+        <Nav.Link href='/'>All Pokemon</Nav.Link>
+      </Nav>
+    </Container>
+  </Navbar>
+  }
 }
 
 export { Navigation };
